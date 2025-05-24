@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Team Vitesse</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-color:black;
+            }
+            
+            nav {
+                background-color: #0d1117;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #ffffff;
+                letter-spacing: 1px;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 1.5rem;
+            }
+
+            .nav-links a {
+                color: #c9d1d9;
+                text-decoration: none;
+                font-size: 1.3rem;
+                padding: 0.5rem;
+                border-radius: 5px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                font-family: 'Orbitron', sans-serif;
+            }
+
+            .nav-links a:hover {
+                background-color: #21262d;
+                color: #58a6ff;
+            }
+
+            footer {
+                margin-top: auto;
+                background-color: #0d1117;
+                color: #c9d1d9;
+                text-align: center;
+                padding: 1.5rem 1rem;
+                font-size: 0.9rem;
+                border-top: 1px solid #21262d;
+            }
+
+            .footer-contact {
+                margin-top: 0.5rem;
+                color: #8b949e;
+            }
+
+            @media (max-width: 600px) {
+                nav {
+                        flex-direction: column;
+                        align-items: flex-start;
+                }
+                .nav-links {
+                        flex-direction: column;
+                        width: 100%;
+                        margin-top: 1rem;
+                }
+            }
+        
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">Vitesse  <img src="logo.png" alt=":vitesse:" style="height: 3em; vertical-align: middle;"> </div>
+            <div class="nav-links">
+              <a href="main.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="supporters.html">Supporters</a>
+              <a href="car.html">Car</a>
+              <a href="regional.html">Regional Finals Round</a>
+            </div>
+        </nav>
+        
+        <footer>
+          <div>2025 Team Vitesse, F1 in Schools India.</div>
+          <div class="footer-contact">
+            Email: vitessef12024@gmail.com | Phone: +91 88004 56668
+          </div>
+        </footer>
+        <script>
+          const headers = document.querySelectorAll('.accordion-header');
+          headers.forEach(header => {
+            header.addEventListener('click', () => {
+              const content = header.nextElementSibling;
+              const isOpen = content.style.display === 'block';
+              document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+              content.style.display = isOpen ? 'none' : 'block';
+            });
+          });
+        </script>
+    </body>
+</html>

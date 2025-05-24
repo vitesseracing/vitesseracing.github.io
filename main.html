@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Team Vitesse</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-color:black;
+            }
+
+            nav {
+                background-color: #0d1117;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #ffffff;
+                letter-spacing: 1px;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 1.5rem;
+            }
+
+            .nav-links a {
+                color: #c9d1d9;
+                text-decoration: none;
+                font-size: 1.3rem;
+                padding: 0.5rem;
+                border-radius: 5px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                font-family: 'Orbitron', sans-serif;
+            }
+
+            .nav-links a:hover {
+                background-color: #21262d;
+                color: #58a6ff;
+            }
+
+            footer {
+                margin-top: auto;
+                background-color: #0d1117;
+                color: #c9d1d9;
+                text-align: center;
+                padding: 1.5rem 1rem;
+                font-size: 0.9rem;
+                border-top: 1px solid #21262d;
+            }
+
+            .footer-contact {
+                margin-top: 0.5rem;
+                color: #8b949e;
+            }
+
+            @media (max-width: 600px) {
+                nav {
+                        flex-direction: column;
+                        align-items: flex-start;
+                }
+                .nav-links {
+                        flex-direction: column;
+                        width: 100%;
+                        margin-top: 1rem;
+                }
+            }
+
+            h1 {
+                color: white;
+                margin-left:1%;
+            }
+
+            .accordion {
+                max-width: 100%;
+            }
+
+            .accordion-item {
+                background-color: black;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-bottom: 1rem;
+                overflow: hidden;
+                margin-left:1%;
+            }
+
+            .accordion-header {
+                background-color: #e2e8f0;
+                cursor: pointer;
+                padding: 1rem;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+
+            .accordion-header:hover {
+                background-color: #cbd5e1;
+            }
+
+            .accordion-content {
+                display: none;
+                padding: 1rem;
+                border-top: 1px solid #ddd;
+                background-color: #f9fafb;
+            }
+
+            .banner {
+                position: relative;
+                width: 100%;
+                height: 60vh;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%), url('image.png');
+                background-size: cover;
+                background-position: center 60%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                color: white;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+                overflow: hidden;
+            }
+
+            .banner .top-text {
+                position: absolute;
+                top: 1rem;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 5.5rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0);
+            }
+
+            .content {
+                padding: 2rem;
+                background: #fff;
+            }
+
+            /* Scroll Fade Effect */
+            .banner::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 70px;
+                background: linear-gradient(to bottom, rgba(0,0,0,0), black);
+                pointer-events: none;
+            }
+
+            .quotediv {
+                display: flex;
+                justify-content: space-around;
+                margin: 2rem auto;
+                max-width: 100%;
+            }
+
+            .left {
+                color: white;
+                font-size: 4rem;
+                text-align: right;
+                width: 30%;
+            }
+
+            .mainquote {
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+
+            .right {
+                color: white;
+                font-size: 4rem;
+                text-align: left;
+                width: 30%;
+            }
+
+            p {
+                font-size: 20px;
+                color: white;
+                font-family: 'Orbitron', sans-serif;
+            }
+
+            .banner {
+                display: flex;
+                justify-content: space-around;
+                margin: 2rem auto;
+                max-width: 100%;
+            }
+
+            /* Fade-in animation */
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+            }
+
+            .fade-in.visible {
+                opacity: 1;
+                transform: none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">Vitesse <img src="logo.png" alt=":vitesse:" style="height: 3em; vertical-align: middle;"> </div>
+            <div class="nav-links">
+                <a href="main.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="supporters.html">Supporters</a>
+                <a href="car.html">Car</a>
+                <a href="regional.html">Regional Finals Round</a>
+            </div>
+        </nav>
+
+        <div class="banner fade-in">
+            <div class="top-text">WE ARE TEAM VITESSE</div>
+        </div>
+
+        <br>
+        <div class="quotediv fade-in">
+            <div class="left">"</div>
+            <div class="mainquote">
+                <p class="quote">Team Vitesse is a passionate group of students driven by innovation, speed, and precision. Competing in the F1 in Schools™ challenge, we blend engineering excellence with creative design to build one of the fastest and most efficient miniature F1 cars. Based in Gurugram, India, our team is united by a shared love for motorsport and STEM. We aim to represent not just technical brilliance but also collaboration, sustainability, and strategic thinking — the key ingredients for real-world engineering success.</p>
+            </div>
+            <div class="right">"</div>
+        </div>
+        <br>
+
+        <h1 class="fade-in">F1 in Schools FAQs</h1>
+        <div class="accordion fade-in">
+            <div class="accordion-item">
+                <div class="accordion-header">What is F1 in Schools?</div>
+                <div class="accordion-content">
+                    F1 in Schools is an international STEM competition where students design, analyze, manufacture, and race miniature CO₂-powered Formula 1 cars.
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">What age group is F1 in Schools for?</div>
+                <div class="accordion-content">
+                    The competition is open to students aged 9–19, typically divided into junior, development, and professional classes.
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">How are teams judged?</div>
+                <div class="accordion-content">
+                    Teams are judged on engineering design, enterprise, verbal presentation, pit display, portfolio, and car performance on track.
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">How do I get started with a team?</div>
+                <div class="accordion-content">
+                    Start by gathering a team of 3–6 members, register on the official F1 in Schools website, and begin developing your car and portfolio materials.
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div>2025 Team Vitesse, F1 in Schools India.</div>
+            <div class="footer-contact">
+                Email: vitessef12024@gmail.com | Phone: +91 88004 56668
+            </div>
+        </footer>
+
+        <!-- Accordion Functionality -->
+        <script>
+            const headers = document.querySelectorAll('.accordion-header');
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const isOpen = content.style.display === 'block';
+                    document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+                    content.style.display = isOpen ? 'none' : 'block';
+                });
+            });
+        </script>
+
+        <!-- Fade-in on scroll -->
+        <script>
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeInElements.forEach(el => observer.observe(el));
+        </script>
+    </body>
+</html>
