@@ -1,111 +1,463 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Team Vitesse</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
-            body {
-                margin: 0;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-                background-color:black;
-            }
-            
-            nav {
-                background-color: #0d1117;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem 2rem;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            }
+<head>
+    <title>Team Vitesse</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
-            .logo {
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: #ffffff;
-                letter-spacing: 1px;
-            }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: black;
+        }
 
-            .nav-links {
-                display: flex;
-                gap: 1.5rem;
-            }
+        nav {
+            background-color: #0d1117;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
-            .nav-links a {
-                color: #c9d1d9;
-                text-decoration: none;
-                font-size: 1.3rem;
-                padding: 0.5rem;
-                border-radius: 5px;
-                transition: background-color 0.3s ease, color 0.3s ease;
-                font-family: 'Orbitron', sans-serif;
-            }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
 
-            .nav-links a:hover {
-                background-color: #21262d;
-                color: #58a6ff;
-            }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
 
-            footer {
-                margin-top: auto;
-                background-color: #0d1117;
-                color: #c9d1d9;
-                text-align: center;
-                padding: 1.5rem 1rem;
-                font-size: 0.9rem;
-                border-top: 1px solid #21262d;
-            }
+        .nav-links a {
+            color: #c9d1d9;
+            text-decoration: none;
+            font-size: 1.3rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+        }
 
-            .footer-contact {
-                margin-top: 0.5rem;
-                color: #8b949e;
-            }
+        .nav-links a:hover {
+            background-color: #21262d;
+            color: #58a6ff;
+        }
 
-            @media (max-width: 600px) {
-                nav {
-                        flex-direction: column;
-                        align-items: flex-start;
-                }
-                .nav-links {
-                        flex-direction: column;
-                        width: 100%;
-                        margin-top: 1rem;
-                }
-            }
+        h1, h2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 2rem 1rem 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+            letter-spacing: 1.5px;
+        }
+
+        hr {
+            border: 1px solid white;
+            width: 90%;
+            margin: 2rem auto;
+        }
+
+        /* Sponsor section: horizontal row of tiers */
+        .sponsor-section {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 1rem;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        /* Each tier is vertical: title on top, sponsors in a row below */
+        .sponsor-tier {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 250px;
+        }
+
+        .sponsor-section, .sponsor-tier {
+            padding-left: 0.1rem;
+            padding-right: 0.1rem;
+            max-width: 100vw; /* prevent overflow */
+        }
+
+        .sponsor-tier h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Sponsor logos: horizontal row */
+        .sponsor-logos {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 0.3rem;
+            width: 100%;
+        }
+
+        .sponsor-card {
+            flex: 0 0 auto;
+            width: auto;
+            margin: 0.02rem;
+            border-radius: 12px;
+            text-align: center;
+            user-select: none;
+        }
         
-        </style>
-    </head>
-    <body>
-        <nav>
-            <div class="logo">Vitesse  <img src="logo.png" alt=":vitesse:" style="height: 3em; vertical-align: middle;"> </div>
-            <div class="nav-links">
-              <a href="main.html">Home</a>
-              <a href="about.html">About Us</a>
-              <a href="supporters.html">Supporters</a>
-              <a href="car.html">Car</a>
-              <a href="regional.html">Regional Finals Round</a>
+        .sponsor-card img {
+            max-height: 7.3vh;
+            width: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 0.6rem;
+        }
+        
+        .sponsor-name {
+            font-family: 'Orbitron', sans-serif;
+            color: #58a6ff;
+            font-size: 0.85rem;   /* slightly smaller font */
+            text-align: center;
+            user-select: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            margin: 0;           /* remove default margin */
+        }
+    
+
+        #centeralign {
+            text-align: center;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #21262d;
+        }
+
+        .footer-contact {
+            margin-top: 0.5rem;
+            color: #8b949e;
+        }
+
+        .infinite-carousel {
+            position: relative;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            border-radius: 16px;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 30s linear infinite;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: auto;
+            border-radius: 12px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+            text-align: center;
+            user-select: none;
+        }
+
+        .carousel-item img {
+            max-height: 6vh;
+            width: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 0.6rem;
+        }
+
+        .carousel-item .name {
+            font-family: 'Orbitron', sans-serif;
+            color: #58a6ff;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .infinite-carousel:hover .carousel-track {
+            animation-play-state: paused;
+            cursor: grab;
+        }
+
+        iframe{
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        @media (max-width: 900px) {
+            .sponsor-tier {
+                min-width: 180px;
+                padding: 0 1rem;
+            }
+            .sponsor-card {
+                max-width: 160px;
+                padding: 0.6rem 0.8rem 0.8rem;
+                width: 140px;
+            }
+            .sponsor-logos {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Vitesse <img src="logo.png" alt=":vitesse:" style="height: 3em; vertical-align: middle;"></div>
+        <div class="nav-links">
+            <a href="main.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="car.html">Car</a>
+            <a href="regional.html">Regional Finals Round</a>
+        </div>
+    </nav>
+
+    <h1>Our Regional Finals Supporters</h1>
+    <hr>
+
+    <div class="infinite-carousel">
+        <div class="carousel-track">
+            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+            <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+            <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+            <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+            <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+            <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+            <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+            <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+            <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+            <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+            <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+            <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+            <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+        </div>
+    </div>
+
+    <div class="sponsor-section">
+
+        <div class="sponsor-tier bronze-tier">
+            <h2>Bronze Tier</h2>
+            <div class="sponsor-logos">
+                <div class="sponsor-card">
+                    <img src="MultiTasking.jpg" alt="MultiTasking">
+                    <div class="sponsor-name">MultiTasking</div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="HOP.png" alt="House Of Polish">
+                    <div class="sponsor-name">House Of Polish</div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="SURJ.jpeg" alt="SURJ Enterprises">
+                    <div class="sponsor-name">SURJ Enterprises</div>
+                </div>
             </div>
-        </nav>
-        
-        <footer>
-          <div>2025 Team Vitesse, F1 in Schools India.</div>
-          <div class="footer-contact">
+        </div>
+
+        <div class="sponsor-tier silver-tier">
+            <h2>Silver Tier</h2>
+            <div class="sponsor-logos">
+                <div class="sponsor-card">
+                    <img src="TAB.jpeg" alt="TAB" style="max-height:9vh">
+                    <div class="sponsor-name">TAB</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sponsor-tier gold-tier">
+            <h2>Gold Tier</h2>
+            <div class="sponsor-logos">
+                <div class="sponsor-card">
+                    <img src="StrategyPluto.jpeg" alt="Strategy Pluto">
+                    <div class="sponsor-name">Strategy Pluto</div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="Vardhaman.jpeg" alt="Vardhaman Creations">
+                    <div class="sponsor-name">Vardhaman Creations</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    <h2 id="centeralign">Our Regional Finals Sponsorship Deck</h2>
+    <hr>
+    <iframe src="Sponsorship_Regional.pdf" width="800vw" height="500vh" style="border: none;"></iframe>
+    <hr>
+
+    <h1>Our National Finals Supporters</h1>
+    <hr>
+    <div class="infinite-carousel">
+        <div class="carousel-track">
+            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+            <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+            <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+            <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+            <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+            <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+            <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+            <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+            <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+        </div>
+    </div>
+
+    <div class="sponsor-section">
+
+        <div class="sponsor-tier bronze-tier">
+            <h2>Bronze Tier</h2>
+            <div class="sponsor-logos">
+                <div class="sponsor-card">
+                    <img src="MultiTasking.jpg" alt="MultiTasking">
+                    <div class="sponsor-name">MultiTasking</div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="HOP.png" alt="House Of Polish">
+                    <div class="sponsor-name">House Of Polish</div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="SURJ.jpeg" alt="SURJ Enterprises">
+                    <div class="sponsor-name">SURJ Enterprises</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sponsor-tier silver-tier">
+            <h2>Silver Tier</h2>
+            <div class="sponsor-logos">
+                <div class="sponsor-card">
+                    <img src="TAB.jpeg" alt="TAB" style="max-height:9vh">
+                    <div class="sponsor-name">TAB</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sponsor-tier gold-tier">
+            <h2>Gold Tier</h2>
+            <div class="sponsor-logos">
+                <div class="sponsor-card">
+                    <img src="StrategyPluto.jpeg" alt="Strategy Pluto">
+                    <div class="sponsor-name">Strategy Pluto</div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="Vardhaman.jpeg" alt="Vardhaman Creations">
+                    <div class="sponsor-name">Vardhaman Creations</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <h2 id="centeralign">Our National Finals Sponsorship Deck</h2>
+    <hr>
+    <iframe src="Sponsorship_National.pdf" width="800vw" height="500vh" style="border: none;"></iframe>
+    <hr>
+
+    <footer>
+        <div>2025 Team Vitesse, F1 in Schools India.</div>
+        <div class="footer-contact">
             Email: vitessef12024@gmail.com | Phone: +91 88004 56668
-          </div>
-        </footer>
-        <script>
-          const headers = document.querySelectorAll('.accordion-header');
-          headers.forEach(header => {
-            header.addEventListener('click', () => {
-              const content = header.nextElementSibling;
-              const isOpen = content.style.display === 'block';
-              document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
-              content.style.display = isOpen ? 'none' : 'block';
-            });
-          });
-        </script>
-    </body>
+        </div>
+    </footer>
+</body>
+<script>
+    const carousel = document.querySelector('.infinite-carousel');
+    const track = carousel.querySelector('.carousel-track');
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener('mousedown', e => {
+        isDown = true;
+        track.style.animationPlayState = 'paused';
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        carousel.style.cursor = 'grabbing';
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+        track.style.animationPlayState = 'running';
+        carousel.style.cursor = 'default';
+    });
+
+    carousel.addEventListener('mouseup', () => {
+        isDown = false;
+        track.style.animationPlayState = 'running';
+        carousel.style.cursor = 'default';
+    });
+
+    carousel.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 3;
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    carousel.addEventListener('touchstart', e => {
+        isDown = true;
+        track.style.animationPlayState = 'paused';
+        startX = e.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener('touchend', () => {
+        isDown = false;
+        track.style.animationPlayState = 'running';
+    });
+
+    carousel.addEventListener('touchmove', e => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 3;
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+</script>
 </html>
