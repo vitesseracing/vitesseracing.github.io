@@ -24,6 +24,18 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -251,35 +263,35 @@
         </div>
     </nav>
 
-    <h1>Our Regional Finals Supporters</h1>
-    <hr>
-
-    <div class="infinite-carousel">
-        <div class="carousel-track">
-            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
-            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
-            <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
-            <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
-            <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
-            <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
-            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
-            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
-            <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
-            <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
-            <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
-            <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
-            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
-            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
-            <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
-            <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
-            <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
-            <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+    <h1 class="fade-in">Our Regional Finals Supporters</h1>
+    <hr class="fade-in">
+    <div class="fade-in">
+        <div class="infinite-carousel">
+            <div class="carousel-track">
+                <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+                <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+                <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+                <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+                <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+                <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+                <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+                <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+                <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+                <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+                <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+                <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+                <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+                <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+                <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+                <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+                <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+                <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+            </div>
         </div>
     </div>
 
     <div class="sponsor-section">
-
-        <div class="sponsor-tier bronze-tier">
+        <div class="sponsor-tier bronze-tier fade-in">
             <h2>Bronze Tier</h2>
             <div class="sponsor-logos">
                 <div class="sponsor-card">
@@ -297,7 +309,7 @@
             </div>
         </div>
 
-        <div class="sponsor-tier silver-tier">
+        <div class="sponsor-tier silver-tier fade-in">
             <h2>Silver Tier</h2>
             <div class="sponsor-logos">
                 <div class="sponsor-card">
@@ -307,7 +319,7 @@
             </div>
         </div>
 
-        <div class="sponsor-tier gold-tier">
+        <div class="sponsor-tier gold-tier fade-in">
             <h2>Gold Tier</h2>
             <div class="sponsor-logos">
                 <div class="sponsor-card">
@@ -323,30 +335,35 @@
 
     </div>
 
-    <hr>
-    <h2 id="centeralign">Our Regional Finals Sponsorship Deck</h2>
-    <hr>
-    <iframe src="Sponsorship_Regional.pdf" width="800vw" height="500vh" style="border: none;"></iframe>
-    <hr>
+    <hr class="fade-in">
+    <h2 id="centeralign" class="fade-in">Our Regional Finals Sponsorship Deck</h2>
+    <hr class="fade-in">
+    <iframe class="fade-in" src="Sponsorship_Regional.pdf" width="800vw" height="500vh" style="border: none;"></iframe>
+    <hr class="fade-in">
 
-    <h1>Our National Finals Supporters</h1>
-    <hr>
-    <div class="infinite-carousel">
-        <div class="carousel-track">
-            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
-            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
-            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
-            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
-            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
-            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
-            <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
-            <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+    <h1 class="fade-in">Our National Finals Supporters</h1>
+    <hr class="fade-in">
+    <div class="fade-in">
+        <div class="infinite-carousel">
+            <div class="carousel-track">
+                <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+                <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+                <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+                <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+                <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+                <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+                <div class="carousel-item"><img src="MultiTasking.jpg" alt="MultiTasking"><div class="name">MultiTasking</div></div>
+                <div class="carousel-item"><img src="HOP.png" alt="House Of Polish"><div class="name">House Of Polish</div></div>
+                <div class="carousel-item"><img src="SURJ.jpeg" alt="SURJ Enterprises"><div class="name">SURJ Enterprises</div></div>
+                <div class="carousel-item"><img src="TAB.jpeg" alt="TAB"><div class="name">TAB</div></div>
+                <div class="carousel-item"><img src="StrategyPluto.jpeg" alt="Strategy Pluto"><div class="name">Strategy Pluto</div></div>
+                <div class="carousel-item"><img src="Vardhaman.jpeg" alt="Vardhaman"><div class="name">Vardhaman Creations</div></div>
+            </div>
         </div>
     </div>
 
     <div class="sponsor-section">
-
-        <div class="sponsor-tier bronze-tier">
+        <div class="sponsor-tier bronze-tier fade-in">
             <h2>Bronze Tier</h2>
             <div class="sponsor-logos">
                 <div class="sponsor-card">
@@ -358,32 +375,42 @@
                     <div class="sponsor-name">House Of Polish</div>
                 </div>
                 <div class="sponsor-card">
-                    <img src="Gaurav.jpeg" alt="Gaurav Stationary">
-                    <div class="sponsor-name">Gaurav Stationary</div>
+                    <img src="SURJ.jpeg" alt="SURJ Enterprises">
+                    <div class="sponsor-name">SURJ Enterprises</div>
                 </div>
             </div>
         </div>
 
-        <div class="sponsor-tier silver-tier">
+        <div class="sponsor-tier silver-tier fade-in">
             <h2>Silver Tier</h2>
             <div class="sponsor-logos">
                 <div class="sponsor-card">
+                    <img src="TAB.jpeg" alt="TAB" style="max-height:9vh">
+                    <div class="sponsor-name">TAB</div>
                 </div>
             </div>
         </div>
 
-        <div class="sponsor-tier gold-tier">
+        <div class="sponsor-tier gold-tier fade-in">
             <h2>Gold Tier</h2>
             <div class="sponsor-logos">
+                <div class="sponsor-card">
+                    <img src="StrategyPluto.jpeg" alt="Strategy Pluto">
+                    <div class="sponsor-name">Strategy Pluto</div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="Vardhaman.jpeg" alt="Vardhaman Creations">
+                    <div class="sponsor-name">Vardhaman Creations</div>
+                </div>
             </div>
         </div>
 
     </div>
-    <hr>
-    <h2 id="centeralign">Our National Finals Sponsorship Deck</h2>
-    <hr>
-    <iframe src="Sponsorship_National.pdf" width="800vw" height="500vh" style="border: none;"></iframe>
-    <hr>
+    <hr class="fade-in">
+    <h2 id="centeralign" class="fade-in">Our National Finals Sponsorship Deck</h2>
+    <hr class="fade-in">
+    <iframe class="fade-in" src="Sponsorship_National.pdf" width="0%" height="50%" style="border: none;"></iframe>
+    <hr class="fade-in">
 
     <footer>
         <div>2025 Team Vitesse, F1 in Schools India.</div>
@@ -393,58 +420,67 @@
     </footer>
 </body>
 <script>
-    const carousel = document.querySelector('.infinite-carousel');
-    const track = carousel.querySelector('.carousel-track');
+  // Fade-in observer
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  });
+
+  // Carousel dragging logic
+  const carouselElems = document.querySelectorAll('.infinite-carousel');
+  carouselElems.forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    let isDown = false, startX, scrollLeft;
 
     carousel.addEventListener('mousedown', e => {
-        isDown = true;
-        track.style.animationPlayState = 'paused';
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-        carousel.style.cursor = 'grabbing';
+      isDown = true;
+      track.style.animationPlayState = 'paused';
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+      carousel.style.cursor = 'grabbing';
     });
-
     carousel.addEventListener('mouseleave', () => {
-        isDown = false;
-        track.style.animationPlayState = 'running';
-        carousel.style.cursor = 'default';
+      isDown = false;
+      track.style.animationPlayState = 'running';
+      carousel.style.cursor = 'default';
     });
-
     carousel.addEventListener('mouseup', () => {
-        isDown = false;
-        track.style.animationPlayState = 'running';
-        carousel.style.cursor = 'default';
+      isDown = false;
+      track.style.animationPlayState = 'running';
+      carousel.style.cursor = 'default';
     });
-
     carousel.addEventListener('mousemove', e => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 3;
-        carousel.scrollLeft = scrollLeft - walk;
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 3;
+      carousel.scrollLeft = scrollLeft - walk;
     });
-
     carousel.addEventListener('touchstart', e => {
-        isDown = true;
-        track.style.animationPlayState = 'paused';
-        startX = e.touches[0].pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
+      isDown = true;
+      track.style.animationPlayState = 'paused';
+      startX = e.touches[0].pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
     });
-
     carousel.addEventListener('touchend', () => {
-        isDown = false;
-        track.style.animationPlayState = 'running';
+      isDown = false;
+      track.style.animationPlayState = 'running';
     });
-
     carousel.addEventListener('touchmove', e => {
-        if (!isDown) return;
-        const x = e.touches[0].pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 3;
-        carousel.scrollLeft = scrollLeft - walk;
+      if (!isDown) return;
+      const x = e.touches[0].pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 3;
+      carousel.scrollLeft = scrollLeft - walk;
     });
+  });
 </script>
+
 </html>
