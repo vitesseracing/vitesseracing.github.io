@@ -1,192 +1,197 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Team Vitesse</title>
-        <link rel="icon" type="image/png" href="logo.png">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
-            body {
-                margin: 0;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-                background-color:black;
-            }
-            
-            nav {
-                background-color: #0d1117;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem 2rem;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            }
+  <head>
+    <title>Team Vitesse</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
-            .logo {
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: #ffffff;
-                letter-spacing: 1px;
-            }
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: black;
+        overflow-x: hidden;
+      }
 
-            .nav-links {
-                display: flex;
-                gap: 1.5rem;
-            }
+      nav {
+        background-color: #0d1117;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
 
-            .nav-links a {
-                color: #c9d1d9;
-                text-decoration: none;
-                font-size: 1.3rem;
-                padding: 0.5rem;
-                border-radius: 5px;
-                transition: background-color 0.3s ease, color 0.3s ease;
-                font-family: 'Orbitron', sans-serif;
-            }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        letter-spacing: 1px;
+      }
 
-            .nav-links a:hover {
-                background-color: #21262d;
-                color: #58a6ff;
-            }
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
 
-            .cards_upper,
-            .cards_lower {
-                margin: 0 auto;
-                width: fit-content;
-                display: flex;
-                gap: 10rem;
-                flex-wrap: nowrap;
-                align-items: center;
-                justify-content: center;
-                white-space: nowrap;
-            }
+      .nav-links a {
+        color: #c9d1d9;
+        text-decoration: none;
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-family: 'Orbitron', sans-serif;
+      }
 
-            .aarav, .ayan, .lakshya, .ryaan, .suraj{
-                border: 0.1rem solid white;
-                margin: 2rem 1rem 2rem 1rem;
-                background-color: rgb(20, 20, 20);
-                border-radius:3%;
-            }
+      .nav-links a:hover {
+        background-color: #21262d;
+        color: #58a6ff;
+      }
 
-            .photo{
-                border-radius:3%;
-                height:25rem;
-                margin: 2rem 4rem 0rem 4rem;
-            }
+      .cards_upper,
+      .cards_lower {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 160px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 2rem 0;
+      }
 
-            footer {
-                margin-top: auto;
-                background-color: #0d1117;
-                color: #c9d1d9;
-                text-align: center;
-                padding: 1.5rem 1rem;
-                font-size: 0.9rem;
-                border-top: 1px solid #21262d;
-            }
+      .aarav,
+      .ayan,
+      .lakshya,
+      .ryaan,
+      .suraj {
+        border: 2px solid white;
+        background-color: rgb(20, 20, 20);
+        border-radius: 3%;
+        width: 320px;
+        text-align: center;
+        flex-shrink: 0;
+      }
 
-            h1, h2{
-                color:white;
-                text-align:center;
-                font-family: Orbitron;
-            }
+      .photo {
+        border-radius: 3%;
+        height: 400px;
+        width: 280px;
+        margin: 2rem auto 0 auto;
+        display: block;
+        object-fit: cover;
+      }
 
-            h2 {
-                max-width: 30rem;
-                margin: 0rem 1rem 1rem 1rem;
-                word-break: break-word;       /* ✅ Force word to break */
-                overflow-wrap: break-word;    /* Fallback for compatibility */
-                white-space: normal;   
-                margin-top:1rem;
-            }
+      h1,
+      h2 {
+        color: white;
+        text-align: center;
+        font-family: Orbitron;
+      }
 
-            hr{
-                border: 1px solid white;
-            }
+      h2 {
+        max-width: 280px;
+        margin: 1rem auto;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        font-size: 1rem;
+      }
 
-            .footer-contact {
-                margin-top: 0.5rem;
-                color: #8b949e;
-            }
+      hr {
+        border: 1px solid white;
+        margin: 0.5rem auto;
+        width: 80%;
+      }
 
-            @media (max-width: 600px) {
-                nav {
-                        flex-direction: column;
-                        align-items: flex-start;
-                }
-                .nav-links {
-                        flex-direction: column;
-                        width: 100%;
-                        margin-top: 1rem;
-                }
-            }
-        
-        </style>
-    </head>
-    <body>
-        <nav>
-            <div class="logo">Vitesse  <img src="logo.png" alt=":vitesse:" style="height: 3em; vertical-align: middle;"> </div>
-            <div class="nav-links">
-              <a href="main.html">Home</a>
-              <a href="about.html">About Us</a>
-              <a href="supporters.html">Supporters</a>
-              <a href="car.html">Car</a>
-              <a href="regional.html">Regional Finals Round</a>
-            </div>
-        </nav>
-        <div class="cards">
-            <div class="cards_upper">
-                <div class="aarav">
-                    <img src="Aarav.png" class="photo">
-                    <h1>Aarav Sareen</h1>
-                    <hr>
-                    <h2>Enterprise Portfolio Manager, Co-Sponsorship Manager, Social Media Manager</h2>
-                </div>
-                <div class="ayan">
-                    <img src="Ayan.png" class="photo">
-                    <h1>Ayan Sur</h1>
-                    <hr>
-                    <h2>Research and Development Manager, Design Consultant</h2>
-                </div>
-                <div class="lakshya">
-                    <img src="Lakshya.png" class="photo">
-                    <h1>Lakshya Agarwal</h1>
-                    <hr>
-                    <h2>Lead Designer, Computational Fluid Dynamics Analyst</h2>
-                </div>
-            </div>
-            <div class="cards_lower">
-                <div class="ryaan">
-                    <img src="Ryaan.jpeg" class="photo">
-                    <h1>Ryaan Verma</h1>
-                    <hr>
-                    <h2>Project Management Portfolio Manager, Sponsorship Manager</h2>
-                </div>
-                <div class="suraj">
-                    <img src="Suraj.png" class="photo">
-                    <h1>Suraj Gupta</h1>
-                    <hr>
-                    <h2>Design & Engineering Portfolio Manager, Co-Research and Development Manager, Website Manager</h2>
-                </div>
-            </div> 
+      footer {
+        margin-top: auto;
+        background-color: #0d1117;
+        color: #c9d1d9;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+        border-top: 1px solid #21262d;
+      }
+
+      .footer-contact {
+        margin-top: 0.5rem;
+        color: #8b949e;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        Vitesse
+        <img
+          src="logo.png"
+          alt=":vitesse:"
+          style="height: 3em; vertical-align: middle"
+        />
+      </div>
+      <div class="nav-links">
+        <a href="main.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="supporters.html">Supporters</a>
+        <a href="car.html">Car</a>
+        <a href="regional.html">Regional Finals Round</a>
+      </div>
+    </nav>
+
+    <div class="cards">
+      <div class="cards_upper">
+        <div class="aarav">
+          <img src="Aarav.png" class="photo" />
+          <h1>Aarav Sareen</h1>
+          <hr />
+          <h2>
+            Enterprise Portfolio Manager, Co-Sponsorship Manager, Social Media
+            Manager
+          </h2>
         </div>
-        
-        <footer>
-          <div>2025 Team Vitesse, F1 in Schools India.</div>
-          <div class="footer-contact">
-            Email: vitessef12024@gmail.com | Phone: +91 88004 56668
-          </div>
-        </footer>
-        <script>
-          const headers = document.querySelectorAll('.accordion-header');
-          headers.forEach(header => {
-            header.addEventListener('click', () => {
-              const content = header.nextElementSibling;
-              const isOpen = content.style.display === 'block';
-              document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
-              content.style.display = isOpen ? 'none' : 'block';
-            });
-          });
-        </script>
-    </body>
+        <div class="ayan">
+          <img src="Ayan.png" class="photo" />
+          <h1>Ayan Sur</h1>
+          <hr />
+          <h2>Research and Development Manager, Design Consultant</h2>
+        </div>
+        <div class="lakshya">
+          <img src="Lakshya.png" class="photo" />
+          <h1>Lakshya Agarwal</h1>
+          <hr />
+          <h2>Lead Designer, Computational Fluid Dynamics Analyst</h2>
+        </div>
+      </div>
+      <div class="cards_lower">
+        <div class="ryaan">
+          <img src="Ryaan.jpeg" class="photo" />
+          <h1>Ryaan Verma</h1>
+          <hr />
+          <h2>
+            Project Management Portfolio Manager, Sponsorship Manager
+          </h2>
+        </div>
+        <div class="suraj">
+          <img src="Suraj.png" class="photo" />
+          <h1>Suraj Gupta</h1>
+          <hr />
+          <h2>
+            Design & Engineering Portfolio Manager, Co-Research and Development
+            Manager, Website Manager
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>2025 Team Vitesse, F1 in Schools India.</div>
+      <div class="footer-contact">
+        Email: vitessef12024@gmail.com | Phone: +91 88004 56668
+      </div>
+    </footer>
+  </body>
 </html>
