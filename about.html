@@ -50,6 +50,31 @@
                 color: #58a6ff;
             }
 
+            .cards_upper,
+            .cards_lower {
+                margin: 0 auto;
+                width: fit-content;
+                display: flex;
+                gap: 10rem;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap;
+            }
+
+            .aarav, .ayan, .lakshya, .ryaan, .suraj{
+                border: 0.1rem solid white;
+                margin: 2rem 1rem 2rem 1rem;
+                background-color: rgb(20, 20, 20);
+                border-radius:3%;
+            }
+
+            .photo{
+                border-radius:3%;
+                height:25rem;
+                margin: 2rem 4rem 0rem 4rem;
+            }
+
             footer {
                 margin-top: auto;
                 background-color: #0d1117;
@@ -58,6 +83,25 @@
                 padding: 1.5rem 1rem;
                 font-size: 0.9rem;
                 border-top: 1px solid #21262d;
+            }
+
+            h1, h2{
+                color:white;
+                text-align:center;
+                font-family: Orbitron;
+            }
+
+            h2 {
+                max-width: 30rem;
+                margin: 0rem 1rem 1rem 1rem;
+                word-break: break-word;       /* ✅ Force word to break */
+                overflow-wrap: break-word;    /* Fallback for compatibility */
+                white-space: normal;   
+                margin-top:1rem;
+            }
+
+            hr{
+                border: 1px solid white;
             }
 
             .footer-contact {
@@ -90,6 +134,42 @@
               <a href="regional.html">Regional Finals Round</a>
             </div>
         </nav>
+        <div class="cards">
+            <div class="cards_upper">
+                <div class="aarav">
+                    <img src="Aarav.png" class="photo">
+                    <h1>Aarav Sareen</h1>
+                    <hr>
+                    <h2>Enterprise Portfolio Manager, Co-Sponsorship Manager, Social Media Manager</h2>
+                </div>
+                <div class="ayan">
+                    <img src="Ayan.png" class="photo">
+                    <h1>Ayan Sur</h1>
+                    <hr>
+                    <h2>Research and Development Manager, Design Consultant</h2>
+                </div>
+                <div class="lakshya">
+                    <img src="Lakshya.png" class="photo">
+                    <h1>Lakshya Agarwal</h1>
+                    <hr>
+                    <h2>Lead Designer, Computational Fluid Dynamics Analyst</h2>
+                </div>
+            </div>
+            <div class="cards_lower">
+                <div class="ryaan">
+                    <img src="Ryaan.jpeg" class="photo">
+                    <h1>Ryaan Verma</h1>
+                    <hr>
+                    <h2>Project Management Portfolio Manager, Sponsorship Manager</h2>
+                </div>
+                <div class="suraj">
+                    <img src="Suraj.png" class="photo">
+                    <h1>Suraj Gupta</h1>
+                    <hr>
+                    <h2>Design & Engineering Portfolio Manager, Co-Research and Development Manager, Website Manager</h2>
+                </div>
+            </div> 
+        </div>
         
         <footer>
           <div>2025 Team Vitesse, F1 in Schools India.</div>
