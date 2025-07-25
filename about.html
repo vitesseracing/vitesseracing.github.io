@@ -208,9 +208,11 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const elements = document.querySelectorAll('.fade-in');
-        elements.forEach(el => {
-          el.classList.add('visible');
-        });
+        setTimeout(() => {
+          elements.forEach(el => {
+            el.classList.add('visible');
+          });
+        }, 50);
       });
     </script>
   </body>
