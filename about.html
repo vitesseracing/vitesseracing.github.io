@@ -121,6 +121,17 @@
         margin-top: 0.5rem;
         color: #8b949e;
       }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: none;
+      }
     </style>
   </head>
   <body>
@@ -143,7 +154,7 @@
     </nav>
 
     <div class="cards">
-      <div class="cards_upper">
+      <div class="cards_upper fade-in">
         <div class="aarav">
           <img src="Aarav.png" class="photo" />
           <h1>Aarav Sareen</h1>
@@ -166,7 +177,7 @@
           <h2>Lead Designer, Computational Fluid Dynamics Analyst</h2>
         </div>
       </div>
-      <div class="cards_lower">
+      <div class="cards_lower fade-in">
         <div class="ryaan">
           <img src="Ryaan.jpeg" class="photo" />
           <h1>Ryaan Verma</h1>
